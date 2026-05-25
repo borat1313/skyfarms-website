@@ -1215,7 +1215,7 @@ footer {
   <div class="container">
     <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--s-6); align-items: start;" class="map-layout fade-in">
       <div style="background: var(--color-cream-2); padding: var(--s-5); border-radius: 4px; aspect-ratio: 4 / 3;">
-        <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+        <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
   <defs>
     <linearGradient id="oceanGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#E5DFD0"/>
@@ -1226,7 +1226,7 @@ footer {
       <stop offset="100%" stop-color="#F0EBDD"/>
     </linearGradient>
     <pattern id="mountainHatch" patternUnits="userSpaceOnUse" width="14" height="14" patternTransform="rotate(60)">
-      <line x1="0" y1="0" x2="0" y2="14" stroke="#0F1F1A" stroke-width="0.4" opacity="0.18"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#0F1F1A" stroke-width="0.4" opacity="0.15"/>
     </pattern>
     <filter id="pinShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
@@ -1236,138 +1236,126 @@ footer {
     </filter>
   </defs>
 
-  <!-- Pacific Ocean background -->
-  <rect x="0" y="0" width="800" height="520" fill="url(#oceanGrad)"/>
+  <rect x="0" y="0" width="900" height="560" fill="url(#oceanGrad)"/>
 
-  <!-- Faint ocean wave indicators -->
+  <!-- Faint ocean ripple lines (left side, won't conflict with pins now) -->
   <g stroke="#0F1F1A" stroke-width="0.35" opacity="0.10" fill="none">
-    <path d="M 10 180 Q 30 178, 50 180 T 90 180"/>
-    <path d="M 15 220 Q 35 218, 55 220 T 95 220"/>
-    <path d="M 5 280 Q 25 278, 45 280 T 85 280"/>
-    <path d="M 10 340 Q 30 338, 50 340 T 90 340"/>
+    <path d="M 30 200 Q 60 198, 90 200"/>
+    <path d="M 35 250 Q 65 248, 95 250"/>
+    <path d="M 25 320 Q 55 318, 85 320"/>
+    <path d="M 30 390 Q 60 388, 90 390"/>
   </g>
 
-  <!-- ============ BRITISH COLUMBIA (mainland) ============ -->
+  <!-- BC mainland — shifted right with more left margin for Squamish callout -->
   <path d="
-    M 95 50
-    L 540 50
-    L 540 460
-    L 295 460
-    L 285 455
-    L 278 445
-    L 275 432
-    L 268 425
-    L 255 425
-    L 248 418
-    L 240 415
-    L 232 410
-    L 225 405
-    L 218 398
-    L 210 392
-    L 205 385
-    L 200 376
-    L 195 368
-    L 188 362
-    L 180 358
-    L 172 350
-    L 168 340
-    L 165 330
-    L 160 320
-    L 152 312
-    L 145 305
-    L 140 295
-    L 138 285
-    L 142 275
-    L 145 265
-    L 142 255
-    L 138 245
-    L 135 235
-    L 132 225
-    L 128 215
-    L 122 205
-    L 115 195
-    L 110 185
-    L 108 175
-    L 110 165
-    L 115 155
-    L 118 145
-    L 115 135
-    L 110 125
-    L 105 115
-    L 100 105
-    L 95 95
-    L 92 85
-    L 90 75
-    L 92 65
+    M 200 60
+    L 640 60
+    L 640 500
+    L 380 500
+    L 370 495
+    L 360 488
+    L 352 478
+    L 344 470
+    L 336 462
+    L 326 455
+    L 316 446
+    L 308 438
+    L 300 428
+    L 292 418
+    L 285 408
+    L 280 398
+    L 275 386
+    L 270 374
+    L 268 362
+    L 270 350
+    L 273 338
+    L 270 326
+    L 265 314
+    L 260 302
+    L 255 290
+    L 248 278
+    L 242 266
+    L 238 254
+    L 240 240
+    L 245 228
+    L 248 216
+    L 245 204
+    L 240 192
+    L 232 180
+    L 225 168
+    L 220 156
+    L 218 144
+    L 222 132
+    L 226 120
+    L 224 108
+    L 220 96
+    L 215 84
+    L 210 72
     Z" fill="url(#landGrad)" stroke="#0F1F1A" stroke-width="1" stroke-linejoin="round" filter="url(#pinShadow)"/>
 
   <!-- Vancouver Island -->
   <path d="
-    M 65 365
-    L 95 350
-    L 110 365
-    L 125 385
-    L 130 405
-    L 120 425
-    L 105 432
-    L 85 425
-    L 70 410
-    L 60 395
-    L 58 380
+    M 145 408
+    L 180 392
+    L 200 408
+    L 218 432
+    L 220 450
+    L 208 468
+    L 188 472
+    L 165 462
+    L 148 442
+    L 138 422
     Z" fill="url(#landGrad)" stroke="#0F1F1A" stroke-width="1" stroke-linejoin="round" filter="url(#pinShadow)"/>
 
-  <!-- ============ ALBERTA ============ -->
+  <!-- Alberta — wider, more space to breathe -->
   <path d="
-    M 540 50
-    L 740 50
-    L 740 460
-    L 540 460
+    M 640 60
+    L 870 60
+    L 870 500
+    L 640 500
     Z" fill="url(#landGrad)" stroke="#0F1F1A" stroke-width="1" stroke-linejoin="round" filter="url(#pinShadow)"/>
 
-  <!-- BC/AB border emphasized -->
-  <line x1="540" y1="50" x2="540" y2="460" stroke="#0F1F1A" stroke-width="0.7" opacity="0.5" stroke-dasharray="3 3"/>
+  <line x1="640" y1="60" x2="640" y2="500" stroke="#0F1F1A" stroke-width="0.7" opacity="0.5" stroke-dasharray="3 3"/>
 
-  <!-- Rocky Mountain range overlay along BC/AB border -->
-  <g opacity="0.5">
-    <path d="M 500 80 Q 510 100, 505 130 Q 515 160, 510 190 Q 520 220, 515 250 Q 525 280, 520 310 Q 530 340, 525 370 Q 535 400, 530 440" stroke="#0F1F1A" stroke-width="0.5" fill="none" opacity="0.4"/>
-    <path d="M 475 70 Q 485 100, 480 135 Q 490 165, 485 195 Q 495 225, 490 255 Q 500 285, 495 315 Q 505 345, 500 375 Q 510 405, 505 440" stroke="#0F1F1A" stroke-width="0.5" fill="none" opacity="0.3"/>
+  <!-- Rocky Mountain ridges -->
+  <g opacity="0.45">
+    <path d="M 610 90 Q 620 120, 615 155 Q 625 188, 620 222 Q 630 255, 625 290 Q 635 322, 630 356 Q 640 390, 635 425 Q 645 458, 640 488" stroke="#0F1F1A" stroke-width="0.5" fill="none" opacity="0.4"/>
+    <path d="M 583 80 Q 593 115, 588 152 Q 598 185, 593 220 Q 603 252, 598 286 Q 608 320, 603 354 Q 613 388, 608 422 Q 618 455, 613 488" stroke="#0F1F1A" stroke-width="0.5" fill="none" opacity="0.3"/>
   </g>
 
-  <!-- Mountain hatching texture (BC mountainous interior) -->
-  <rect x="200" y="80" width="320" height="350" fill="url(#mountainHatch)" opacity="0.6"/>
+  <!-- Mountain hatch texture — confined so it doesn't reach pin zones -->
+  <rect x="305" y="100" width="320" height="280" fill="url(#mountainHatch)" opacity="0.5"/>
 
-  <!-- Faint elevation/contour lines -->
+  <!-- Contour lines -->
   <g stroke="#0F1F1A" stroke-width="0.3" opacity="0.12" fill="none">
-    <path d="M 220 150 Q 320 145, 420 160 T 500 170"/>
-    <path d="M 200 220 Q 310 215, 410 230 T 500 240"/>
-    <path d="M 195 300 Q 305 295, 400 310 T 495 320"/>
-    <path d="M 580 200 Q 640 195, 700 210"/>
-    <path d="M 575 300 Q 640 295, 700 305"/>
+    <path d="M 320 175 Q 420 170, 520 185 T 610 195"/>
+    <path d="M 305 240 Q 410 235, 510 250 T 605 260"/>
+    <path d="M 295 320 Q 405 315, 500 330 T 600 340"/>
+    <path d="M 690 220 Q 760 215, 830 230"/>
+    <path d="M 685 320 Q 760 315, 830 325"/>
   </g>
 
-  <!-- ============ Province name labels ============ -->
-  <text x="295" y="155" font-family="Instrument Serif, serif" font-size="22" fill="#0F1F1A" opacity="0.4" font-style="italic" letter-spacing="0.05em">British Columbia</text>
-  <text x="615" y="155" font-family="Instrument Serif, serif" font-size="22" fill="#0F1F1A" opacity="0.4" font-style="italic" text-anchor="middle">Alberta</text>
+  <!-- Province labels -->
+  <text x="410" y="180" font-family="Instrument Serif, serif" font-size="26" fill="#0F1F1A" opacity="0.42" font-style="italic" text-anchor="middle">British Columbia</text>
+  <text x="755" y="180" font-family="Instrument Serif, serif" font-size="26" fill="#0F1F1A" opacity="0.42" font-style="italic" text-anchor="middle">Alberta</text>
 
-  <!-- ============ Reference cities (small dots) ============ -->
+  <!-- Reference city dots — placed OFF the farm pin clusters -->
   <g>
-    <!-- Vancouver -->
-    <circle cx="155" cy="425" r="2.5" fill="#0F1F1A" opacity="0.55"/>
-    <text x="148" y="445" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55" text-anchor="end">Vancouver</text>
-
+    <!-- Vancouver: south coast, just east of Vancouver Island -->
+    <circle cx="252" cy="470" r="2.5" fill="#0F1F1A" opacity="0.55"/>
+    <text x="232" y="488" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" opacity="0.55" text-anchor="end">Vancouver</text>
     <!-- Edmonton -->
-    <circle cx="620" cy="285" r="2.5" fill="#0F1F1A" opacity="0.55"/>
-    <text x="628" y="289" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55">Edmonton</text>
-
+    <circle cx="750" cy="300" r="2.5" fill="#0F1F1A" opacity="0.55"/>
+    <text x="758" y="304" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" opacity="0.55">Edmonton</text>
     <!-- Calgary -->
-    <circle cx="600" cy="365" r="2.5" fill="#0F1F1A" opacity="0.55"/>
-    <text x="608" y="369" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55">Calgary</text>
+    <circle cx="730" cy="385" r="2.5" fill="#0F1F1A" opacity="0.55"/>
+    <text x="738" y="389" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" opacity="0.55">Calgary</text>
   </g>
 
-  <!-- ============ FARM PIN 1: BUSBY, ALBERTA (Operational) ============ -->
-  <g transform="translate(615, 263)">
-    <circle r="34" fill="#7D9C5B" opacity="0.18">
-      <animate attributeName="r" values="22;42;22" dur="3s" repeatCount="indefinite"/>
+  <!-- ====== PIN 1: BUSBY, AB (operational) ====== -->
+  <g transform="translate(745, 268)">
+    <circle r="36" fill="#7D9C5B" opacity="0.16">
+      <animate attributeName="r" values="24;44;24" dur="3s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.18;0;0.18" dur="3s" repeatCount="indefinite"/>
     </circle>
     <circle r="20" fill="#7D9C5B" opacity="0.30">
@@ -1375,28 +1363,15 @@ footer {
     </circle>
     <circle r="9" fill="#7D9C5B" stroke="#FAFAF7" stroke-width="2"/>
     <circle r="3" fill="#FAFAF7"/>
-    <line x1="0" y1="-12" x2="0" y2="-32" stroke="#7D9C5B" stroke-width="1"/>
-    <text x="0" y="-40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#0F1F1A" font-weight="500" letter-spacing="0.08em">BUSBY · ALBERTA</text>
-    <text x="0" y="-52" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#7D9C5B" letter-spacing="0.06em">14 MODULAR UNITS · OPERATIONAL</text>
+    <line x1="0" y1="-12" x2="0" y2="-34" stroke="#7D9C5B" stroke-width="1"/>
+    <text x="0" y="-42" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#0F1F1A" font-weight="600" letter-spacing="0.08em">BUSBY · ALBERTA</text>
+    <text x="0" y="-54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#7D9C5B" letter-spacing="0.06em">14 MODULAR UNITS · OPERATIONAL</text>
   </g>
 
-  <!-- ============ FARM PIN 2: ABBOTSFORD, BC (Acquisition pending) ============ -->
-  <g transform="translate(205, 432)">
-    <circle r="30" fill="#C8975A" opacity="0.18">
-      <animate attributeName="r" values="20;38;20" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.20;0;0.20" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="9" fill="none" stroke="#C8975A" stroke-width="2.5" stroke-dasharray="3 2"/>
-    <circle r="3" fill="#C8975A"/>
-    <line x1="0" y1="14" x2="22" y2="38" stroke="#C8975A" stroke-width="1"/>
-    <text x="26" y="42" font-family="JetBrains Mono, monospace" font-size="11" fill="#0F1F1A" font-weight="500" letter-spacing="0.08em">ABBOTSFORD, BC</text>
-    <text x="26" y="54" font-family="JetBrains Mono, monospace" font-size="9" fill="#C8975A" letter-spacing="0.06em">16 UNITS · ACQUISITION PENDING</text>
-  </g>
-
-  <!-- ============ FARM PIN 3: SQUAMISH, BC (Flagship — In development) ============ -->
-  <g transform="translate(165, 378)">
-    <circle r="38" fill="#7D9C5B" opacity="0.15">
-      <animate attributeName="r" values="24;46;24" dur="2.8s" repeatCount="indefinite"/>
+  <!-- ====== PIN 2: SQUAMISH, BC (flagship, in development) — placed up-coast, label points east-up into BC interior ====== -->
+  <g transform="translate(283, 388)">
+    <circle r="38" fill="#7D9C5B" opacity="0.14">
+      <animate attributeName="r" values="26;46;26" dur="2.8s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.16;0;0.16" dur="2.8s" repeatCount="indefinite"/>
     </circle>
     <circle r="22" fill="#7D9C5B" opacity="0.22">
@@ -1404,43 +1379,62 @@ footer {
     </circle>
     <circle r="11" fill="#0F1F1A" stroke="#7D9C5B" stroke-width="2"/>
     <circle r="4" fill="#7D9C5B"/>
-    <!-- Flagship star indicator -->
-    <g transform="translate(11, -11)">
+    <!-- Flagship star marker, offset up-right of pin -->
+    <g transform="translate(12, -12)">
       <circle r="7" fill="#0F1F1A"/>
       <path d="M 0 -4 L 1.2 -1.2 L 4 -1.2 L 1.8 1 L 2.4 4 L 0 2.4 L -2.4 4 L -1.8 1 L -4 -1.2 L -1.2 -1.2 Z" fill="#C8975A"/>
     </g>
-    <line x1="-16" y1="0" x2="-50" y2="-30" stroke="#7D9C5B" stroke-width="1"/>
-    <text x="-54" y="-30" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" fill="#0F1F1A" font-weight="600" letter-spacing="0.08em">SQUAMISH, BC</text>
-    <text x="-54" y="-18" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#C8975A" letter-spacing="0.06em">FLAGSHIP · IN DEVELOPMENT</text>
-    <text x="-54" y="-7" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55" letter-spacing="0.06em">BC Hydro · renewable</text>
+    <!-- Label leader line goes UP-LEFT into open coastal space -->
+    <line x1="-15" y1="-5" x2="-50" y2="-40" stroke="#7D9C5B" stroke-width="1"/>
+    <text x="-54" y="-46" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13" fill="#0F1F1A" font-weight="600" letter-spacing="0.08em">SQUAMISH, BC</text>
+    <text x="-54" y="-32" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#C8975A" letter-spacing="0.06em">FLAGSHIP · IN DEVELOPMENT</text>
+    <text x="-54" y="-20" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55" letter-spacing="0.06em">BC Hydro · renewable</text>
   </g>
 
-  <!-- ============ Legend (bottom) ============ -->
-  <g transform="translate(50, 482)">
-    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55" letter-spacing="0.1em">— STATUS</text>
-    <g transform="translate(70, -3)">
-      <circle r="4" fill="#7D9C5B"/>
-      <text x="9" y="3" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" letter-spacing="0.06em">OPERATIONAL</text>
-    </g>
-    <g transform="translate(195, -3)">
-      <circle r="4" fill="none" stroke="#C8975A" stroke-width="1.5" stroke-dasharray="2 1"/>
-      <text x="9" y="3" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" letter-spacing="0.06em">ACQUISITION PENDING</text>
-    </g>
-    <g transform="translate(360, -3)">
-      <circle r="4" fill="#0F1F1A" stroke="#7D9C5B" stroke-width="1.5"/>
-      <text x="9" y="3" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" letter-spacing="0.06em">FLAGSHIP · IN DEVELOPMENT</text>
+  <!-- ====== PIN 3: ABBOTSFORD, BC (acquisition pending) — label points east-down to clear Squamish ====== -->
+  <g transform="translate(330, 452)">
+    <circle r="28" fill="#C8975A" opacity="0.16">
+      <animate attributeName="r" values="18;36;18" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.20;0;0.20" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="9" fill="none" stroke="#C8975A" stroke-width="2.5" stroke-dasharray="3 2"/>
+    <circle r="3" fill="#C8975A"/>
+    <!-- Label leader line goes DOWN-RIGHT into open BC interior space -->
+    <line x1="11" y1="6" x2="50" y2="32" stroke="#C8975A" stroke-width="1"/>
+    <text x="54" y="36" font-family="JetBrains Mono, monospace" font-size="12" fill="#0F1F1A" font-weight="600" letter-spacing="0.08em">ABBOTSFORD, BC</text>
+    <text x="54" y="50" font-family="JetBrains Mono, monospace" font-size="9" fill="#C8975A" letter-spacing="0.06em">16 UNITS · ACQUISITION PENDING</text>
+  </g>
+
+  <!-- ====== Legend — moved further down + given dark background strip for separation ====== -->
+  <g transform="translate(0, 528)">
+    <rect x="0" y="-18" width="900" height="32" fill="#0F1F1A" opacity="0.04"/>
+    <g transform="translate(50, 0)">
+      <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" opacity="0.55" letter-spacing="0.12em">— STATUS</text>
+      <g transform="translate(85, -3)">
+        <circle r="5" fill="#7D9C5B"/>
+        <text x="11" y="4" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" letter-spacing="0.08em">OPERATIONAL</text>
+      </g>
+      <g transform="translate(238, -3)">
+        <circle r="5" fill="none" stroke="#C8975A" stroke-width="1.8" stroke-dasharray="2 1.5"/>
+        <text x="11" y="4" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" letter-spacing="0.08em">ACQUISITION PENDING</text>
+      </g>
+      <g transform="translate(440, -3)">
+        <circle r="5" fill="#0F1F1A" stroke="#7D9C5B" stroke-width="1.8"/>
+        <text x="11" y="4" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" letter-spacing="0.08em">FLAGSHIP · IN DEVELOPMENT</text>
+      </g>
     </g>
   </g>
 
-  <!-- ============ Compass and metadata ============ -->
-  <g transform="translate(745, 70)" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.55">
-    <line x1="0" y1="-2" x2="0" y2="22" stroke="currentColor" stroke-width="0.8"/>
+  <!-- Compass top-right -->
+  <g transform="translate(855, 88)" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" opacity="0.55">
+    <line x1="0" y1="-2" x2="0" y2="24" stroke="currentColor" stroke-width="0.9"/>
     <path d="M -4 4 L 0 -4 L 4 4 Z" fill="currentColor"/>
-    <text x="-3" y="33">N</text>
+    <text x="-3" y="36">N</text>
   </g>
 
-  <text x="50" y="35" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F1F1A" opacity="0.5" letter-spacing="0.12em">SKYFARMS · DEPLOYMENT MAP</text>
-  <text x="50" y="46" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.4" letter-spacing="0.1em">WESTERN CANADA · 2026</text>
+  <!-- Metadata top-left -->
+  <text x="50" y="48" font-family="JetBrains Mono, monospace" font-size="11" fill="#0F1F1A" opacity="0.5" letter-spacing="0.12em">SKYFARMS · DEPLOYMENT MAP</text>
+  <text x="50" y="62" font-family="JetBrains Mono, monospace" font-size="9" fill="#0F1F1A" opacity="0.4" letter-spacing="0.1em">WESTERN CANADA · 2026</text>
 </svg>
       </div>
       <div>
