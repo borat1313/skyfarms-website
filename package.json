@@ -1,0 +1,23 @@
+{
+  "name": "skyfarms-website",
+  "version": "1.0.0",
+  "description": "SkyFarms — Canadian Agriculture, Unbounded. Modular controlled-environment agriculture systems.",
+  "homepage": "https://skyfarms.ca",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/skyfarms-website.git"
+  },
+  "author": "SkyFarms Team",
+  "license": "UNLICENSED",
+  "keywords": [
+    "agriculture",
+    "CEA",
+    "controlled-environment",
+    "vertical-farming",
+    "food-tech",
+    "canada"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
